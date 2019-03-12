@@ -11,35 +11,30 @@ El servicio cuenta con dos partes (la parte del centro de acopio y la de los don
 
 ### Funcionales
 
-- *RF001*:El sistema deberá registrar y almacenar en la BDI un correo electrónico (ya sea del encargado o uno especial creado por la organización para el uso del sistema), la contraseña que usará para acceder a la cuenta (que será confirmada reescribiéndola), la ubicación del centro de acopio (calle, cruzamientos, colonia, numero y código postal), el nombre del centro de acopio, del centro de acopio.
+- *RF001*: El sistema deberá registrar y almacenar en la BDI un correo electrónico (ya sea del encargado o uno especial creado por la organización para el uso del sistema), la contraseña que usará para acceder a la cuenta (que será confirmada reescribiéndola), la ubicación del centro de acopio (calle, cruzamientos, colonia, numero y código postal), el nombre del centro de acopio, del centro de acopio.
 
 - *RF002*: El sistema deberá verificar el correo electrónico proporcionado.
 
-- *RF003*: El sistema deberá permitir al encargado acceder al mismo usando el correo electrónico y la contraseña proporcionada.
+- *RF003*: El sistema esperará una señal del verificador para finalmente confirmar la veracidad del centro de acopio.
 
-- *RF004*: El sistema deberá aportarle una herramienta de edición de bases de datos al encargado para que pueda modificar una BDP.
+- *RF004*: El sistema deberá permitir al encargado acceder al mismo usando el correo electrónico y la contraseña proporcionada.
 
-- *RF005*: El sistema deberá proporcionarle herramientas al encargado para la edición del perfil - -del centro de acopio para ingresar la descripción y el objetivo de este al igual que su horario de atención.
+- *RF005*: El sistema deberá aportarle una herramienta de edición de bases de datos al encargado para que pueda modificar una BDP.
 
-- *RF006*: El sistema deberá proporcionar otra área en donde un donador podrá ver la información de los centros de acopio.
+- *RF006*: El sistema deberá proporcionarle herramientas al encargado para la edición del perfil del centro de acopio para ingresar la descripción y el objetivo de este al igual que su horario de atención.
 
-- *RF007*: El sistema pedirá al donador un código postal para saber su ubicación aproximada para posteriormente mostrarlo en un mapa.
+- *RF007*: El sistema deberá proporcionar otra área en donde un donador podrá ver la información de los centros de acopio.
 
-- *RF008*: El donador podrá navegar por el mapa para buscar centros de acopio cercanos al código postal proporcionado.
+- *RF008*: El sistema le mostrará al donador una lista de los centros de acopio.
 
-- *RF009*: El donador podrá seleccionar un centro de acopio y al hacerlo le mostrará la información de este
+- *RF009*: El donador podrá seleccionar un centro de acopio y al hacerlo le mostrará la información de este.
+
 
 ### No funcionales
 
-- *RNF001*: La verificación del correo electrónico no debe durar más de 5 minutos.
+- *RNF001*: La BDP tendrá una plantilla la cual no podrá ser modificada por los actores.
+- *RNF002*: El sistema debe ser accesible únicamente por un navegador de internet.
 
-- *RNF002*: La BDP no deberá pesar mas de 500mb.
-
-- *RNF003*: La BDP tendrá una plantilla la cual no podrá ser modificada por los actores.
-
-- *RNF004*: La interfaz deberá ser minimalista.
-
-- *RNF005*: El sistema debe ser accesible únicamente por un navegador de internet.
 
 ---
 
@@ -502,7 +497,14 @@ La comunicación se realizará de forma oficial en el canal específico al proye
 
 ### Procesos de planeación
 
-Para la planeación del proyecto se realizarán juntas semanales entre los integrantes de equipo donde se evaluará el progreso actual y de acuerdo a este se harán los ajustes necesarios para la siguiente evaluación. Pese a esto, el equipo puede ajustarse en caso de algún imprevisto por medio de las plataformas de comunicación previamente mencionadas.  Para tener control del progreso individual se utilizará la plataforma de Trello en donde se repartirán las tareas individuales junto con sus fechas de entrega. Al finalizar la junta el equipo resumirá en una bitácora (la cual se encontrará en el repositorio del proyecto) el avance realizado.
+Para la planeación del proyecto se realizarán juntas semanales entre los integrantes de equipo donde se evaluará el progreso actual y de acuerdo con este se harán los ajustes necesarios para la siguiente evaluación. Pese a esto, el equipo puede ajustarse en caso de algún imprevisto por medio de las plataformas de comunicación previamente mencionadas. Para tener control del progreso individual se utilizará la plataforma de Trello en donde se repartirán las tareas individuales junto con sus fechas de entrega. Al finalizar la junta el equipo resumirá en una bitácora (la cual se encontrará en el repositorio del proyecto) el avance realizado.
+
+Cada semana se dividirá en 3 secciones: 
+
+Asignación: Fechas en las que se fijará que se hará, a quien le toca que, fechas de entrega y pesos de las tareas.
+Elaboración: Fechas en las que se elaborará las tareas asignadas.
+Corrección: Justo después del ultimo día de elaboración el líder del equipo generará un QA de las tareas asignadas y de ser necesario los desarrolladores corregirán las tareas en las fechas de corrección.
+
 
 ### Procesos de monitoreo
 
@@ -511,11 +513,11 @@ Una vez concluido el proceso de planeación, durante el proceso de construcción
 ## Metricas
 ### Avances del proyecto
 
-Para la metrica de el avance general, se establecerá un objetivo semanal a grandes rasgos durante cada junta, los cuales a su vez están conformados por las tareas individuales de cada integrante. De esta forma se pretende tener un avance cuantificable cada semana con fechas límites  razonables para que se pueda completar en su totalidad lo que se estableció.
+Para la métrica de el avance general, se establecerá un objetivo semanal a grandes rasgos durante cada junta, los cuales a su vez están conformados por las tareas individuales de cada integrante. De esta forma se pretende tener un avance cuantificable cada semana con fechas límites razonables para que se pueda completar en su totalidad lo que se estableció.
 
 ### Metricas individuales
 
-Para la medición de las aportaciones individuales, el proyecto se realizará de manera que cada integrante tenga la misma carga durante la repartición de tareas, con respecto a la capacidad de cada integrante. Esto a criterio del líder del equipo que está al tanto de la experiencia de cada integrante por medio de sus currículos y la experiencia que ha adquirido trabajando con ellos en clase. Por lo tanto es responsabilidad del líder la repartición de tareas (lo cual puede considerarse como una tarea para el mismo) de manera que todos tengan una aportación similar, cada semana, aun si se requiere asignar más (o menos) tareas a ciertos integrantes. Como las tareas se asignan de esta forma, la aportación solo se considera si se cumplio en su totalidad con las tareas. Además de esta forma el pro. De esta forma se facilita medir las aportaciones de cada integrante por medio de una tabla como la siguiente:
+Para la medición de las aportaciones individuales, las actividades tendrán una medida de complejidad del 1 al 3 (1 sencillo, 2 normal, 3 complejo), se decidirá cuales tareas tienen que peso en una junta grupal. Está a criterio del líder del equipo decidir quienes harán que tareas de acuerdo con la experiencia que ha adquirido trabajando con ellos en clase (lo que es también considerado como una tarea. Las tareas solo serán contadas si son terminadas en su totalidad y de manera correcta (el líder del equipo se encargará de hacer el QA de las tareas). De esta forma se facilita medir las aportaciones de cada integrante por medio de una tabla como la siguiente:
 
 
 ![](Tabla.png)
