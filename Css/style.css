@@ -99,3 +99,17 @@ body {
   display: block;
   margin-top: 6px;
 }
+
+/* Estilos de la pagina registroResultados
+   ========================================================================== */
+
+/* Contenedor interno */
+.resultados-registro-cont {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: inherit;
+  display: block;
+  padding-top: 1.5em;
+  background: white;
+}
