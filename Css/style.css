@@ -1,0 +1,101 @@
+/* Quitarle margenes a todo */
+* {
+  margin: 0;
+}
+/* Quitarle el color a los enlaces */
+a {
+  text-decoration: none;
+}
+
+/* Estilos generales del body */
+body {
+  background: rgb(0, 176, 240);
+  font-family: 'Open sans', arial;
+  font-weight: lighter;
+}
+
+/* ==========================================================================
+   Estilos de los formularios de registro y login
+   ========================================================================== */
+
+/* Contenedor total del formulario */
+.contenedor-form {
+  background: white;
+  width: 70%;
+  max-width: 1000px;
+  height: auto;
+  margin: 3em auto;
+  box-sizing: border-box;
+  padding-bottom: 3em;
+  border: 1px solid rgb(95, 99, 102);
+  border-radius: 8px;
+}
+
+/* Contenedor interno */
+.formulario {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: inherit;
+  display: block;
+  padding-top: 1.5em;
+}
+
+/* Estilos de los componentes del formulario
+   ========================================================================== */
+
+.formulario h1 {
+  font-size: 20px;
+  font-weight: inherit;
+}
+
+/* Este contenedor sirve para dejar un espaciado entre el h1 y el resto de etiquetas */
+.contenedor-inputs {
+  margin-top: 1.5em;
+}
+
+.formulario label {
+  font-size: 20px;
+  display: inherit;
+  text-align: left;
+  margin-top: 1em;
+}
+
+.formulario input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 10px;
+  font-size: 18px;
+  font-weight: lighter;
+  font-family: 'Open sans', arial;
+  border-radius: 8px;
+  border: 1px solid rgb(47, 82, 143);
+  display: inherit;
+}
+
+.formulario input[type="submit"] {
+  width: 40%;
+  font-family: inherit;
+  font-size: 18px;
+  background: rgb(0, 176, 240);
+  border: 1px solid rgb(47, 82, 143);
+  border-radius: 8px;
+  margin: 1.5em auto 1em auto;
+  box-sizing: border-box;
+  padding: 10px 4px;
+  color: white;
+  -webkit-transition: all ease .1s;
+  -o-transition: all ease .1s;
+  transition: all ease .1s;
+}
+
+/* Animacion del boton */
+.formulario input[type="submit"]:hover {
+  background: rgb(8, 122, 163);
+  cursor: pointer;
+}
+
+.formulario a {
+  display: block;
+  margin-top: 6px;
+}
