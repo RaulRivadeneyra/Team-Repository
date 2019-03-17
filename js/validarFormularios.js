@@ -45,7 +45,7 @@ function validarRegistro() {
     alert("El codigo postal debe ser solo numeros.");
     valido = false;
   }
-  else if(nombre.length > 100) {
+  else if(nombreCentroAcopio.length > 100) {
     alert("El nombre del centro de acopio no debe tener mas de 100 caracteres.");
     valido = false;
   }
