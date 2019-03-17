@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="Css/style.css?v=<?php echo(rand()); ?>" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-  <title>Document</title>
+  <title>Registrarse</title>
 </head>
 <body>
 
   <!-- / Inicio contenedor del formulario -->
-  <form action="registrarDatos.php" method="post" class="contenedor-form">
+  <form action="registrarDatos.php" method="post" class="contenedor-form" onsubmit="return validarRegistro();">
     <div class="formulario">
       <h1>Registrarse como centro de acopio</h1>
       <div class="contenedor-inputs">
@@ -44,6 +44,6 @@
   </form>
   <!-- / Fin contenedor del formulario -->
 
-
+<script src="js/validarFormularios.js"></script>
 </body>
 </html>
