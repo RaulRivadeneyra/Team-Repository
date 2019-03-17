@@ -36,11 +36,11 @@
   	Si el email y el usuario no existe entonces se registran los datos en la BD
 	*/
 	$usuario = $_POST['usuario'];
-  $password = $_POST['password'];
+	$password = $_POST['password'];
 	$email = $_POST['email'];
 	$direccion = $_POST['direccion'];
-  $codigoPostal = $_POST['codigoPostal'];
-  $nombre = $_POST['nombreCentroAcopio'];
+	$codigoPostal = $_POST['codigoPostal'];
+	$nombre = $_POST['nombreCentroAcopio'];
 
 	// Variable para insertar los datos
 	$query = "INSERT INTO Usuarios (Usuario, Password, Email, Direccion, CP, Nombre) VALUES ('$usuario', '$password', '$email', '$direccion', '$codigoPostal', '$nombre')";
