@@ -9,12 +9,15 @@
 </head>
 <body>
   <div class="resultados-registro-cont">
-    <h1>
+    <div class="texto-resultados-registro">
       <?php
       $Result = $_GET['$resultado'];
       echo $Result;
       ?>
-    </h1>
+      <br />
+      ¿Problemas?<br />
+      Contactanos en <a href="#">atencion@aidca.com</a>
+    </div>
   </div>
 
 </body>
