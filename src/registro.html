@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="Css/style.css?v=<?php echo(rand()); ?>" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <title>Registrarse</title>
+</head>
+<body>
+
+  <!-- / Inicio contenedor del formulario -->
+  <form action="php/registrarDatos.php" method="post" class="contenedor-form" onsubmit="return validarRegistro();">
+    <div class="formulario">
+      <h1>Registrarse como centro de acopio</h1>
+      <div class="contenedor-inputs">
+        <label for="usuario">Usuario:</label>
+        <input type="text" placeholder="" id="usuario" name="usuario" onkeyup="validarCamposRegistro(this.value, this.id)" required/>
+		<div id="msg-usuario" class="msg-errores"></div>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" placeholder="" id="password" name="password" onkeyup="validarCamposRegistro(this.value, this.id)" required/>
+		<div id="msg-password" class="msg-errores"></div>
+
+        <label for="confirmPassword">Confirmar contraseña:</label>
+        <input type="password" placeholder="" id="confirmPassword" name="confirmPassword" onkeyup="validarCamposRegistro(this.value, this.id)" required/>
+		<div id="msg-confirmPassword" class="msg-errores"></div>
+
+        <label for="correoElectronico">Dirección de correo electronico:</label>
+        <input type="email" placeholder="" id="email" name="email" onkeyup="validarCamposRegistro(this.value, this.id)" required/>
+		<div id="msg-email" class="msg-errores"></div>
+
+        <label for="direccion">Dirección del centro de acopio:</label>
+        <input type="text" placeholder="" id="direccion" name="direccion" onkeyup="validarCamposRegistro(this.value, this.id)" required/>
+		<div id="msg-direccion" class="msg-errores"></div>
+
+        <label for="codigoPostal">Codigo postal:</label>
+        <input type="text" placeholder="" id="codigoPostal" name="codigoPostal" onkeyup="validarCamposRegistro(this.value, this.id)" required/>
+		<div id="msg-codigoPostal" class="msg-errores"></div>
+
+        <label for="nombreCentroAcopio">Nombre del centro de acopio:</label>
+        <input type="text" placeholder="" id="nombreCentroAcopio" name="nombreCentroAcopio" onkeyup="validarCamposRegistro(this.value, this.id)" required/>
+		<div id="msg-nombreCentroAcopio" class="msg-errores"></div>
+
+        <input type="submit" value="Registrarse" name="registro-btn" />
+
+        <a href="login.html">¿Ya tienes una cuenta?</a>
+      </div>
+    </div>
+  </form>
+  <!-- / Fin contenedor del formulario -->
+
+<script src="js/validarFormularios.js?v=<?php echo(rand()); ?>"></script>
+</body>
+</html>
