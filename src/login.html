@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="Css/style.css?v=<?php echo(rand()); ?>" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <title>Registrarse</title>
+</head>
+<body>
+
+  <!-- / Inicio contenedor del formulario -->
+  <form action="php/iniciarSesion.php" method="post" class="contenedor-form">
+    <div class="formulario">
+      <h1>Iniciar sesión</h1>
+      <div class="contenedor-inputs">
+        <label for="usuario">Usuario:</label>
+        <input type="text" placeholder="" id="usuario" name="usuario" required/>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" placeholder="" id="password" name="password" required/>
+
+        <input type="submit" value="Iniciar sesión" name="login-btn" />
+
+        <a href="registro.html">¿No tienes una cuenta?</a>
+      </div>
+    </div>
+  </form>
+  <!-- / Fin contenedor del formulario -->
+
+</body>
+</html>
