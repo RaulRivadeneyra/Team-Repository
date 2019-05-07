@@ -127,3 +127,109 @@ body {
   margin-top: 5em;
   text-align: justify;
 }
+
+/* Estilos de la pagina principal del centro de acopio
+   ========================================================================== */
+
+
+
+/* HEADER */
+
+.pp-header{
+  position: fixed;
+  display: inline-block;
+  top: 0;
+}
+
+.pp-title{
+  position: fixed;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid black;
+  background: white;
+  text-align: center;
+}
+
+.pp-dropdown {
+
+  z-index: 1;
+  right: 20px;
+  top: 4px;
+  position: fixed;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f1f1f1;
+  min-width: 90px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+.pp-dropdown:hover .dropdown-content {display: block;}
+.pp-dropdown:hover .dropbtn {background-color: #ddd;}
+
+
+
+
+/* MAIN WINDOW */
+
+.pp-body{
+  min-width: 550px;
+}
+
+.pp-main-window{
+  display: block;
+  border-radius: 8px;
+  border: 1px solid black;
+  background-color: #fff;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5em;
+  margin-bottom: 3em;
+  width: 80%;
+  min-height: 10em;
+}
+
+.pp-info{
+  margin: 1em;
+}
+
+.pp-info > h2{
+  font-size: 24px;
+}
+
+.pp-info > h4{
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.pp-info > h3{
+  font-size: 18px;
+}
+
+.pp-table{
+  display: grid;
+  background: #ddd;
+  min-width: 50px;
+  margin: 2em;
+}
+
+
+th, td{
+  width: 20%;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid black;
+}
