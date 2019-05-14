@@ -233,3 +233,170 @@ th, td{
   padding-right: 10px;
   border: 1px solid black;
 }
+
+
+
+/****************************/
+/*       DONOR MAIN         */
+/****************************/
+
+/* Header */
+
+.dm-header{
+  position: fixed;
+  display: inline-block;
+  top: 0;
+}
+
+.dm-header > h1{
+  position: fixed;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid black;
+  background: white;
+  text-align: center;
+}
+
+.dm-header > a{
+  font-size: 16px;
+  z-index: 1;
+  left: 30px;
+  top: 10px;
+  position: fixed;
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+
+.dm-login{
+  font-size: 14px;
+  z-index: 1;
+  right: 30px;
+  top: 8px;
+  position: fixed;
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+
+.dm-login:hover{
+  background: lightgray;
+    outline: none;
+}
+
+.dm-login:active{
+  background: gray;
+  border: none;
+  outline: none;
+}
+
+
+
+/* List */
+
+.dm-list{
+  display: inline-block;
+  background-color: white;
+  border-radius: 0.8em;
+  border: black 1px solid;
+  width: 90%;
+  height: 80%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 4.5em;
+  margin-bottom: 5%;
+  padding: none;
+}
+
+.dm-center{
+  display: flex;
+  background-color: white;
+  border-radius: 0.8em;
+  border: black 1px solid;
+  width: 95%;
+  margin: 1em;
+  align-items: center;
+  padding: none;
+  outline: none;
+}
+
+.dm-center:hover{
+  background-color: lightgray;
+  outline: none;
+}
+.dm-center:active{
+  outline: none;
+  background-color: gray;
+}
+
+.dm-center > h2{
+  margin-left: 1em;
+  margin-right: 1em;
+  display: inline-flex;
+  text-overflow: ellipsis;
+
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 45%;
+  padding: none
+}
+
+.dm-center > h3{
+  display: inline-flex;
+  text-align: center;
+  width: 22%;
+}
+.dm-center > h4{
+  align-items: flex-end;
+  right: 0em;
+  display: inline-flex;
+  text-align: right;
+  width: 33%;
+  margin-right: 1em;
+}
+
+
+/************************/
+/*      Donor Info      */
+/************************/
+
+.di-info{
+  display: inline-block;
+  background-color: white;
+  border-radius: 0.8em;
+  border: black 1px solid;
+  width: 90%;
+  height: 80%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 4.5em;
+  margin-bottom: 5%;
+  padding: none;
+}
+
+.di-info-general > h2{
+  margin-top: 1em;
+  text-align: center;
+}
+
+.di-info-general > h3{
+  margin-left: 4%;
+}
+
+
+.di-table > table{
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 4%;
+  margin-right: 4%;
+  display: inline-block;
+  font-size: 13px;
+  width: 92%;
+}
+
+.di-table > th{
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+}
