@@ -466,6 +466,8 @@ th, td{
   margin-bottom: 15px;
 }
 
+
+
 .ce-add > h4{
   margin-top: 15px;
   margin-bottom: 5px;
@@ -493,7 +495,38 @@ th, td{
   margin-left: 1em;
   margin-right: 1em;
 }
+.ce-bottom-form{
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
 
+.ce-bottom-form > input{
+  width: 25%;
+  height: 2em;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 5%;
+}
+
+.ce-bottom-form > label{
+  display: inline-flex;
+  font-size: 14px;
+}
+
+.lb-date{
+  margin-left: 36%;
+}
+.lb-prio{
+  margin-left: 23%;
+}
+.submt{
+  display: inline-block;
+  width: 50%;
+  margin-left: 44.3%;
+}
 .butt{
   border: none;
   outline: none;
