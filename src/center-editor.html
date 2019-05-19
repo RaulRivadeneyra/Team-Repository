@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <title>AIDCA</title>
+  </head>
+  <body>
+    <header>
+      <div class="ce-header">
+        <a href="main-page.html"><</a>
+        <h1>AIDCA</h1>
+
+      </div>
+
+    </header>
+
+    <div class="ce-body">
+      <div class="ce-add">
+        <h2>Nuevo producto</h2>
+        <form class="new-product" action="index.html" method="post">
+          <input type="text" name="product" placeholder="* Nombre del producto">
+
+          <input type="text" name="observ" placeholder="* Observaciones">
+
+          <input type="number" name="obtained" placeholder="Obtenido">
+
+          <input type="number" name="needed" placeholder="* Necesitado">
+
+          <input type="date" name="date" placeholder="Fecha limite">
+
+          <input type="range" name="priority" min="1" max= "3">
+
+          <input class="submit"type="submit" value="Agregar">
+        </form>
+        <h4>* campos obligatorios</h4>
+      </div>
+      <div class="ce-search">
+        <form class="searching" action="index.html" method="post">
+          <input type="text" name="search" placeholder="Busqueda de producto">
+          <input type="submit" value="Buscar">
+        </form>
+      </div>
+      <div class="ce-table">
+        <table>
+          <thead>
+            <th>ID</th>
+            <th>Producto</th>
+            <th>Observaciones</th>
+            <th>Obtenido</th>
+            <th>Necesario</th>
+            <th>Fecha limite</th>
+            <th>Prioridad</th>
+            <th></th>
+            <th></th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Galletasad</td>
+              <td>Paquetes medianos</td>
+              <td>50</td>
+              <td>670</td>
+              <td>N/A</td>
+              <td>3</td>
+
+              <td><button class="butt" type="button" name="edit">Edit</button></td>
+              <td><button class="butt" type="button" name="delete">X</button></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Galletas</td>
+              <td>Paquetes chicos</td>
+              <td>50</td>
+              <td>670</td>
+              <td>N/A</td>
+              <td>3</td>
+              <td><button class="butt" type="button" name="edit">Edit</button></td>
+              <td><button class="butt" type="button" name="delete">X</button></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Galletas</td>
+              <td>Paquetes medianos</td>
+              <td>50</td>
+              <td>670</td>
+              <td>N/A</td>
+              <td>3</td>
+              <td><button class="butt" type="button" name="edit">Edit</button></td>
+              <td><button class="butt" type="button" name="delete">X</button></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Galletas</td>
+              <td>Paquetes medianos</td>
+              <td>50</td>
+              <td>670</td>
+              <td>N/A</td>
+              <td>3</td>
+              <td><button class="butt" type="button" name="edit">Edit</button></td>
+              <td><button class="butt" type="button" name="delete">X</button></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Galletas</td>
+              <td>Paquetes medianos</td>
+              <td>50</td>
+              <td>670</td>
+              <td>N/A</td>
+              <td>3</td>
+              <td><button class="butt" type="button" name="edit">Edit</button></td>
+              <td><button class="butt" type="button" name="delete">X</button></td>
+            </tr>
+
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

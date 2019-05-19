@@ -400,3 +400,116 @@ th, td{
   margin: 0px;
   padding: 0px;
 }
+
+
+
+
+/* CENTER EDITOR */
+
+.ce-header{
+  position: fixed;
+  display: inline-block;
+  top: 0;
+}
+
+.ce-header > h1{
+  position: fixed;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid black;
+  background: white;
+  text-align: center;
+}
+
+.ce-header > a{
+  font-size: 16px;
+  z-index: 1;
+  font-size: 30px;
+  left: 30px;
+  top: 3px;
+  position: fixed;
+  display: inline-block;
+  border: none;
+  outline: none;
+}
+
+
+.ce-body{
+  display: inline-block;
+  background-color: white;
+  border-radius: 0.8em;
+  border: black 1px solid;
+  width: 90%;
+  height: 80%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 4.5em;
+  margin-bottom: 5%;
+  padding: 1em;
+}
+
+
+.ce-add{
+  display: inline-block;
+  background-color: white;
+  border: black 1px solid;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: .8em;
+  height: 80%;
+  margin-bottom: 2em;
+}
+
+.ce-add > h2{
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.ce-add > h4{
+  margin-top: 15px;
+  margin-bottom: 5px;
+  margin-left: 5%;
+  font-weight: lighter;
+  font-size: 12px;
+}
+
+.new-product > input{
+  width: 25%;
+  height: 2em;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 5%;
+}
+
+.new-product > h4{
+  font-size: 13px;
+  font-weight: normal;
+  margin-left: 5%;
+  margin-top: 5px;
+}
+
+.ce-table{
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.butt{
+  border: none;
+  outline: none;
+}
+
+.butt:hover{
+  background: lightgray;
+}
+
+.butt:active{
+  background: grey;
+}
+
+.searching > input{
+    height: 2em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 1.5em;
+}
