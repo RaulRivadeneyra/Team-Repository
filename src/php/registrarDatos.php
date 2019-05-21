@@ -22,7 +22,7 @@ if(isset($_POST['registro-btn'])) {
     if($usuarioRepetido == 1){
       $resultado .= "<br />El usuario <strong>".$_POST['usuario']."</strong> ya se encuentra registrado.<br />";
     }
-    $resultado .= "<br />Por favor ingrese otro email o <a href='login.html'>inicie sesion.</a><br />";
+    $resultado .= "<br />Por favor ingrese otro email o <a href='../login.html'>inicie sesion.</a><br />";
     // Redirige a registroResultados.php
 		header('Location: registroResultados.php?$resultado='.$resultado);
 	}
@@ -40,21 +40,30 @@ if(isset($_POST['registro-btn'])) {
 	$usuario = $_POST['usuario'];
 	$password = $_POST['password'];
 	$email = $_POST['email'];
-	$direccion = $_POST['direccion'];
 	$codigoPostal = $_POST['codigoPostal'];
 	$nombre = $_POST['nombreCentroAcopio'];
+	$calle = $_POST['calle'];
+	$numeroEdificio = $_POST['numeroEdificio'];
+	$cruzamiento1 = $_POST['cruzamiento1'];
+	$cruzamiento2 = $_POST['cruzamiento2'];
+	$colonia = $_POST['colonia'];
+	$descripcion = $_POST['descripcion'];
+	$telefono = $_POST['telefono'];
 
 	// Variable para insertar los datos
-	$query = "INSERT INTO Usuarios (Usuario, Password, Email, Direccion, CP, Nombre) VALUES ('$usuario', '$password', '$email', '$direccion', '$codigoPostal', '$nombre')";
+	$query = "INSERT INTO usuarios (Usuario, Password, Email, CP, Nombre, Calle, NumeroEdificio, Cruzamiento1, Cruzamiento2, Colonia,
+	Descripcion, Telefono) VALUES ('$usuario', '$password', '$email', '$codigoPostal', '$nombre', '$calle', '$numeroEdificio', 
+	'$cruzamiento1', '$cruzamiento2', '$colonia', '$descripcion', '$telefono')";
   // Insertar los datos
-  if (mysqli_query($conexion, $query)) {
-    $resultado ="Gracias.<br />Su cuenta a sido creada con exito.<br /><br />Usuario: <strong>".$usuario."</strong><br />";
-    $resultado .= "<br />Puede iniciar sesion <a href='login.html'>aqui.</a><br />";
-    header('Location: registroResultados.php?$resultado='.$resultado);
-		} else {
-			echo "Error: " . $query . "<br>" . mysqli_error($conexion);
-		}
+	if (mysqli_query($conexion, $query)) {
+		$resultado ="Gracias.<br />Su cuenta a sido creada con exito.<br /><br />Usuario: <strong>".$usuario."</strong><br />";
+		$resultado .= "<br />Puede iniciar sesion <a href='../login.html'>aqui.</a><br />";
+		header('Location: registroResultados.php?$resultado='.$resultado);
+	} 
+	else {
+		echo "Hubo un problema al intentar guardar los datos: " . $query . "<br>" . mysqli_error($conexion);
 	}
+}
 	mysqli_close($conexion);
 }
 ?>

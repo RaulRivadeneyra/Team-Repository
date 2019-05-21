@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>AIDCA</title>
+    <link rel="stylesheet" href="Css/style.css">
+  </head>
+  <body class="pp-body">
+    <header class="pp-header">
+      <div class="pp-dropdown">
+        <img class="dropbtn" src="/images/menu-icon.png" height="30" alt="menu">
+        <div class="dropdown-content">
+          <a href="center-editor.html">Editor</a>
+          <a href="php/logout.php">Cerrar sesión</a>
+        </div>
+      </div>
+      <div class="pp-title">
+        <h1>AIDCA</h1>
+      </div>
+
+    </header>
+    <div class="pp-main-window">
+      <div class="pp-info">
+        <!-- Informacion cen centro de acopio -->
+        <h2 id="nombre-centro"></h2>
+        <h3 id="direccion-centro"></h3>
+        <h4 id="cp-centro"></h4>
+        <h4 id="email-centro"></h4>
+        <h4 id="telefono-centro"></h4>
+        <h4 id="descripcion-centro"></h4>
+
+      </div>
+      <div class="pp-table">
+        <table>
+          <thead>
+            <tr>
+              <th class="pp-product">Producto</th>
+              <th class="pp-product">Observaciones</th>
+              <th class="pp-quantity">Cantidad actual</th>
+              <th class="pp-quantity">Cantidad requerida</th>
+              <th class="pp-limit">Fecha limite</th>
+              <th class="pp-importance">Prioridad</th>
+            </tr>
+          </thead>
+          <tbody id="productos-tabla"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/validarSesion.js"></script>
+    <script src="js/datosUsuario.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+$servidor = "localhost";
+$usuario = "id9007255_admin";
+$pass = "aidcapass";
+$base = "id9007255_aidca";
+$tabla = "usuarios";
+
+-- Tabla de productos
+
+CREATE TABLE productos
+(
+    id INT NOT NULL,
+	id_Producto INT NOT NULL,
+	nombreProducto VARCHAR(255),
+    cantidadActual INT,
+	cantidadRequerida INT,
+	fechaLimite DATE,
+	prioridad INT,
+    PRIMARY KEY(id_Producto),
+    FOREIGN KEY (id) REFERENCES usuarios(id)
+);

@@ -1,28 +1,25 @@
 <?php
-/**
- * Esta funcion obtiene los datos de un usuario y los devuelve.
- *
- */
-function getDatosUsuario($conexion, $id) {
-  $query = "SELECT * FROM Usuarios WHERE id = '$_SESSION[id]' ";
-  $result = $conexion -> query($query);
-  $count = mysqli_num_rows($result);
-  $usuario = mysqli_fetch_array($result);
-  return $usuario;
-}
+  require 'conexion.php';
+  session_start();
+    $idUsuario = $_SESSION['id_Usuario'];
+    $query = "SELECT * from usuarios WHERE id = $idUsuario";
+    $result = mysqli_query($conexion, $query);
 
-/**
- * Esta funcion imprime los datos de un usuario en forma de lista
- *
- */
-function imprimirDatosUsuarioLista($usuario) {
-  if(!empty($usuario)) {
-	echo "<h3>Sesión iniciada</h3>";
-    echo "<strong>Usuario: </strong>".$usuario['Usuario']."<br />";
-    echo "<strong>Email: </strong>".$usuario['Email']."<br />";
-    echo "<strong>Dirección: </strong>".$usuario['Direccion']."<br />";
-    echo "<strong>Codigo postal: </strong>".$usuario['CP']."<br />";
-    echo "<strong>Nombre del centro: </strong>".$usuario['Nombre']."<br />";  
-  }
-}
+    $json = array();
+    while($row = mysqli_fetch_array($result)) {
+      $json[] = array(
+        'Nombre' => $row['Nombre'],
+        'Calle' => $row['Calle'],
+        'NumeroEdificio' => $row['NumeroEdificio'],
+        'Cruzamiento1' => $row['Cruzamiento1'],
+        'Cruzamiento2' => $row['Cruzamiento2'],
+        'Colonia' => $row['Colonia'],
+        'Descripcion' => $row['Descripcion'],
+        'Email' => $row['Email'],
+        'Telefono' => $row['Telefono'],
+        'CodigoPostal' => $row['CP']
+      );
+    }
+    $jsonstring = json_encode($json[0]);
+    echo $jsonstring;
  ?>
