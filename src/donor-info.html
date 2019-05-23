@@ -9,73 +9,37 @@
       <header class="dm-header">
         <h1>AIDCA</h1>
         <button class="dm-login" type="button" name="login">Iniciar sesion</button>
-        <a href="donor-main.html">Back</a>
+        <a href="index.html">Back</a>
       </header>
 
       <div class="di-info">
-        <div class="di-info-general">
-          <h2>Maria de los angeles bondadosos</h2>
-          <h3>9994367349</h3>
-          <h3>Calle 8 x 11 y 9a  #475 Col. Brisas</h3>
-          <h3>Lun a Sab: 9:00 - 20:00</h3>
+        <div class="pp-info">
+          <!-- Informacion cen centro de acopio -->
+          <h2 id="nombre-centro"></h2>
+          <h3 id="direccion-centro"></h3>
+          <h4 id="cp-centro"></h4>
+          <h4 id="email-centro"></h4>
+          <h4 id="telefono-centro"></h4>
+          <h4 id="descripcion-centro"></h4>
         </div>
-        <div class="di-table">
+        <div class="pp-table">
           <table>
             <thead>
-              <th>Producto</th>
-              <th>Observaciones</th>
-              <th>Obtenido</th>
-              <th>Necesario</th>
-              <th>Fecha limite</th>
-              <th>Prioridad</th>
+              <tr>
+                <th class="pp-product">Producto</th>
+                <th class="pp-product">Observaciones</th>
+                <th class="pp-quantity">Cantidad actual</th>
+                <th class="pp-quantity">Cantidad requerida</th>
+                <th class="pp-limit">Fecha limite</th>
+                <th class="pp-importance">Prioridad</th>
+              </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>Galletasadsfasdfasdfasdfasdffas</td>
-                <td>Paquetes medianos</td>
-                <td>50</td>
-                <td>670</td>
-                <td>N/A</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td>Galletas</td>
-                <td>Paquetes chicos</td>
-                <td>50</td>
-                <td>670</td>
-                <td>N/A</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td>Galletas</td>
-                <td>Paquetes medianos</td>
-                <td>50</td>
-                <td>670</td>
-                <td>N/A</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td>Galletas</td>
-                <td>Paquetes medianos</td>
-                <td>50</td>
-                <td>670</td>
-                <td>N/A</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td>Galletas</td>
-                <td>Paquetes medianos</td>
-                <td>50</td>
-                <td>670</td>
-                <td>N/A</td>
-                <td>3</td>
-              </tr>
-
-
-            </tbody>
+            <tbody id="productos-tabla"></tbody>
           </table>
         </div>
-
       </div>
+
+      <script src="js/jquery-3.4.1.min.js"></script>
+      <script src="js/verInfoCentroAcopio.js"></script>
   </body>
 </html>

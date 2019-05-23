@@ -308,13 +308,15 @@ th, td{
 }
 
 .dm-center{
-  display: flex;
+  display: inline-flex;
+  flex-direction: row;
   background-color: white;
   border-radius: 0.8em;
   border: black 1px solid;
   width: 95%;
   margin: 1em;
   align-items: center;
+  justify-content: space-between;
   padding: none;
   outline: none;
 }
@@ -331,7 +333,7 @@ th, td{
 .dm-center > h2{
   margin-left: 1em;
   margin-right: 1em;
-  display: inline-flex;
+  /*display: inline-flex;*/
   text-overflow: ellipsis;
 
   /* Required for text-overflow to do anything */
@@ -342,14 +344,14 @@ th, td{
 }
 
 .dm-center > h3{
-  display: inline-flex;
+  /*display: inline-flex;*/
   text-align: center;
   width: 22%;
 }
 .dm-center > h4{
-  align-items: flex-end;
+  /*align-items: flex-end;*/
   right: 0em;
-  display: inline-flex;
+  /*display: inline-flex;*/
   text-align: right;
   width: 33%;
   margin-right: 1em;
