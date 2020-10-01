@@ -8,9 +8,15 @@ function validarRegistro() {
       password = document.getElementById("password").value,
       confirmPassword = document.getElementById("confirmPassword").value,
       email = document.getElementById("email").value,
-      direccion = document.getElementById("direccion").value,
       codigoPostal = document.getElementById("codigoPostal").value,
-      nombreCentroAcopio = document.getElementById("nombreCentroAcopio").value;
+      nombreCentroAcopio = document.getElementById("nombreCentroAcopio").value,
+	  calle = document.getElementById("calle").value,
+	  cruzamiento1 = document.getElementById("cruzamiento1").value,
+	  cruzamiento2 = document.getElementById("cruzamiento2").value,
+	  numeroEdificio = document.getElementById("numeroEdificio").value,
+	  colonia = document.getElementById("colonia"),
+	  descripcion = document.getElementById("descripcion"),
+	  telefono = document.getElementById("telefono").value;
 
   /* Variable para comprobar si hay espacios en blanco , Variable
      para comprobar si hay letras, variable que devuelve los
@@ -24,6 +30,22 @@ function validarRegistro() {
     alert("El usuario, contraseña, email y codigo postal no deben tener espacios en blanco.");
     valido = false;
   }
+  else if(sinEspacios.test(calle) || sinEspacios.test(cruzamiento1) || sinEspacios.test(cruzamiento2) || sinEspacios.test(numeroEdificio)) {
+	alert("La calle, los cruzamientos y el numero del edificio no deben tener espacios en blanco.");
+	valido = false;
+  }
+  else if(sinEspacios.test(telefono)) {
+	alert("El numero de telefono no debe tener espacios en blanco.");
+	valido = false;
+  }
+  else if(telefono.length > 10) {
+	alert("El numero de telefono no debe tener mas de 10 digitos.");
+	valido = false;
+  }
+  else if(letras.test(telefono)) {
+	alert("El numero de telefono no debe tener letras");
+	valido = false;
+  }
   else if(usuario.length > 40) {
     alert("El usuario no debe tener mas de 40 caracteres.");
     valido = false;
@@ -32,8 +54,8 @@ function validarRegistro() {
     alert("La contraseña no debe tener mas de 30 caracteres.");
     valido = false;
   }
-  else if(direccion.length > 120) {
-    alert("La direccion no debe tener mas de 120 caracteres.");
+  else if(descripcion.length > 255) {
+    alert("La descripcion no debe tener mas de 255 caracteres.");
     valido = false;
   }
   else if(codigoPostal.length != 5) {
@@ -54,6 +76,10 @@ function validarRegistro() {
     alert("Las contraseñas no coinciden");
     valido = false;
   }
+  else if(colonia.length > 100) {
+	alert("La colonia no debe tener mas de 100 caracteres.");
+	valido = false;
+  }
   else {
     valido = true;
   }
@@ -73,7 +99,7 @@ function validarCamposRegistro(texto, id) {
 	let mensaje = document.getElementById("msg-" + id);
 	let msg = "";
 	
-	if (id == "usuario" || id == "password" || id == "confirmPassword" || id == "email" || id == "codigoPostal") {
+	if (id == "usuario" || id == "password" || id == "confirmPassword" || id == "email" || id == "codigoPostal" || id == "telefono") {
 		if (sinEspacios.test(texto)) {
 			msg = "No debe tener espacios en blanco.";
 		}
@@ -92,13 +118,22 @@ function validarCamposRegistro(texto, id) {
 		else if (id == "codigoPostal" && letras.test(texto)){
 			msg = "El codigo postal debe tener solo numeros.";
 		}
+		else if(id == "telefono" && texto.length > 10){
+			msg = "El numero de telefono no debe tener mas de 10 digitos."
+		}
+		else if(id == "telefono" && letras.test(texto)){
+			msg = "El numero de telefono no debe tener letras."
+		}
 	}
 	else{
-		if (id == "direccion" && texto.length > 120){
-			msg = "La dirección no debe tener mas de 120 caracteres.";
+		if (id == "descripcion" && texto.length > 255){
+			msg = "La descripción no debe tener mas de 255 caracteres.";
 		}
 		else if (id == "nombreCentroAcopio" && texto.length > 100){
 			msg = "El nombre no debe tener mas de 100 caracteres.";
+		}
+		else if(id == "colonia" && texto.length > 100){
+			msg = "La colonia no debe tener mas de 100 caracteres.";
 		}
 	}
 	mensaje.innerHTML = msg;

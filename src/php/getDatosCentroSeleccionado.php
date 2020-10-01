@@ -1,8 +1,8 @@
 <?php
   require 'conexion.php';
   session_start();
-    $idUsuario = $_SESSION['id_Usuario'];
-    $query = "SELECT * from usuarios WHERE id = $idUsuario";
+    $idSeleccionado = $_SESSION['centro-seleccionado'];
+    $query = "SELECT * from usuarios WHERE id = $idSeleccionado";
     $result = mysqli_query($conexion, $query);
 
     $json = array();

@@ -31,8 +31,34 @@
         <input type="email" placeholder="" id="email" name="email" onkeyup="validarCamposRegistro(this.value, this.id)" required/>
 		<div id="msg-email" class="msg-errores"></div>
 
-        <label for="direccion">Dirección del centro de acopio:</label>
-        <input type="text" placeholder="" id="direccion" name="direccion" onkeyup="validarCamposRegistro(this.value, this.id)" required/>
+        <label for="direccion">Dirección del centro de acopio</label>
+		<div class="direccion-container">
+			<div class="media-fila">
+				<label for="calle">Calle:</label>
+				<input type="text" placeholder="" id="calle" name="calle" required/>
+			</div>
+			
+			<div class="media-fila">
+				<label for="numeroEdificio">Numero:</label>
+				<input type="text" placeholder="" id="numeroEdificio" name="numeroEdificio" required/>
+			</div>
+			
+			<div class="media-fila">
+				<label for="cruzamiento1">Cruzamiento 1:</label>
+				<input type="text" placeholder="" id="cruzamiento1" name="cruzamiento1" required/>
+			</div>
+			
+			<div class="media-fila">
+				<label for="cruzamiento2">Cruzamiento 2:</label>
+				<input type="text" placeholder="" id="cruzamiento2" name="cruzamiento2" />
+			</div>
+			
+			<label for="colonia">Colonia:</label>
+			<input type="text" placeholder="" id="colonia" name="colonia" onkeyup="validarCamposRegistro(this.value, this.id)" required/>
+			<div id="msg-colonia" class="msg-errores"></div>
+		</div>
+		
+        <!--<input type="text" placeholder="" id="direccion" name="direccion" onkeyup="validarCamposRegistro(this.value, this.id)" required/>-->
 		<div id="msg-direccion" class="msg-errores"></div>
 
         <label for="codigoPostal">Codigo postal:</label>
@@ -42,6 +68,14 @@
         <label for="nombreCentroAcopio">Nombre del centro de acopio:</label>
         <input type="text" placeholder="" id="nombreCentroAcopio" name="nombreCentroAcopio" onkeyup="validarCamposRegistro(this.value, this.id)" required/>
 		<div id="msg-nombreCentroAcopio" class="msg-errores"></div>
+		
+		<label for="descripcion">Descripción del centro de acopio:</label>
+        <input type="text" placeholder="" id="descripcion" name="descripcion" onkeyup="validarCamposRegistro(this.value, this.id)" required/>
+		<div id="msg-descripcion" class="msg-errores"></div>
+		
+		<label for="telefono">Numero de telefono:</label>
+        <input type="text" placeholder="" id="telefono" name="telefono" onkeyup="validarCamposRegistro(this.value, this.id)" required/>
+		<div id="msg-telefono" class="msg-errores"></div>
 
         <input type="submit" value="Registrarse" name="registro-btn" />
 
